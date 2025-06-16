@@ -1,0 +1,104 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabong24 - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="static/css/app.css">
+</head>
+
+<body>
+    <div class="container-fluid vh-100 d-flex align-items-center justify-content-center position-relative"
+        style="background-image: url('./static/assets/images/bg/bg3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="row glass-card rounded-4 overflow-hidden shadow-lg" style="max-width: 1000px; width: 100%;">
+            <div
+                class="col-lg-6 d-flex align-items-center justify-content-center p-4 position-relative overflow-hidden">
+                <div class="rooster-image">
+                    <img class="img-fluid" src="./static/assets/images/bg/cricket1.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-lg-6 glass-form p-4 p-lg-5">
+                <div class="text-center mb-4">
+                    <div
+                        class="logo rounded-circle d-inline-flex align-items-center justify-content-center fs-4 fw-bold mb-3">
+                        <img class="img-fluid" src="static/assets/images/logo/CK369_CV3-01.png" alt="">
+                    </div>
+                    <h2 class="text-white text-white-shadow fw-bold">SABONG24</h2>
+                </div>
+
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label text-white fw-semibold text-label">ឈ្មោះអ្នកប្រើប្រាស់
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text glass-input-group border-end-0">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control glass-input border-start-0 ps-2" id="username"
+                                placeholder="បញ្ចូលឈ្មោះអ្នកប្រើប្រាស់">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label text-white fw-semibold text-label">ពាក្យសម្ងាត់</label>
+                        <div class="input-group">
+                            <span class="input-group-text glass-input-group border-end-0">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <input type="password" class="form-control glass-input border-start-0 border-end-0 ps-2"
+                                id="password" placeholder="បញ្ចូលពាក្យសម្ងាត់">
+                            <button class="btn glass-input-group border-start-0" type="button" id="togglePassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-sabong w-100">
+                        <i class="fas fa-sign-in-alt me-2"></i>
+                        ចូលលេង
+                    </button>
+                </form>
+
+                <div class="d-flex justify-content-center gap-2 mt-4">
+                    <button class="btn flag-btn rounded active" data-lang="kh" title="Khmer">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/flags/4x3/kh.svg"
+                            alt="Cambodia" class="flag-img">
+                    </button>
+                    <button class="btn flag-btn rounded" data-lang="th" title="Thai">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/flags/4x3/th.svg"
+                            alt="Thailand" class="flag-img">
+                    </button>
+                    <button class="btn flag-btn rounded" data-lang="en" title="English">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/flags/4x3/gb.svg"
+                            alt="United Kingdom" class="flag-img">
+                    </button>
+                    <button class="btn flag-btn rounded" data-lang="cn" title="Chinese">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/flags/4x3/cn.svg"
+                            alt="China" class="flag-img">
+                    </button>
+                    <button class="btn flag-btn rounded" data-lang="vn" title="Vietnamese">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/flags/4x3/vn.svg"
+                            alt="Vietnam" class="flag-img">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="static/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+/* static/css/app.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* background: linear-gradient(45deg, #8B4513, #D2691E, #FF4500, #B22222); */
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    font-family: 'Kantumruy Pro', Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+.glass-card {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.glass-form {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    /* background: #FF6B35; */
+    color: white;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+    animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+    0% {
+        box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 10px 30px rgba(255, 107, 53, 0.6);
+    }
+}
+
+.glass-input {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #FF6B35 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25) !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.glass-input-group {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.btn-sabong {
+    background: linear-gradient(45deg, #FF6B35, #FF4500);
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-sabong:hover {
+    background: linear-gradient(45deg, #FF4500, #FF6B35);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+    color: white;
+}
+
+.flag-btn {
+    width: 40px;
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.flag-btn:hover {
+    border-color: #FF6B35;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.flag-btn.active {
+    border-color: #FF6B35;
+    background: rgba(255, 107, 53, 0.2);
+}
+
+.flag-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.text-white-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-label {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1440px) and (max-width: 1745px) {}
+
+@media (min-width: 1200px) and (max-width: 1439px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .glass-card {
+        max-width: 500px !important;
+    }
+
+    .col-lg-6:first-child {
+        display: none !important;
+    }
+
+    .rooster-image img {
+        max-width: 80%;
+    }
+
+    .glass-form {
+        padding: 30px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    .form-label {
+        font-size: 15px;
+    }
+
+    .glass-input {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .btn-sabong {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .flag-btn {
+        width: 35px;
+        height: 25px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+    .glass-card {
+        max-width: 600px !important;
+    }
+
+    .col-lg-6:first-child {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 549px) {
+    .col-lg-6:first-child {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+
+    .col-lg-6:first-child {
+        display: none !important;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    h2 {
+        font-size: 16px !important;
+    }
+
+    .btn-sabong {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .glass-input::placeholder {
+        font-size: 11px;
+    }
+}
