@@ -35,7 +35,7 @@ const translations = {
     th: {
         username: 'ชื่อผู้ใช้',
         password: 'รหัสผ่าน',
-        login: 'เข้าสู่ระบบ (Login)',
+        login: 'เข้าสู่ระบบ',
         usernamePlaceholder: 'ป้อนชื่อผู้ใช้ของคุณ',
         passwordPlaceholder: 'ป้อนรหัสผ่านของคุณ'
     },
@@ -49,14 +49,14 @@ const translations = {
     cn: {
         username: '用户名',
         password: '密码',
-        login: '登录 (Login)',
+        login: '登录',
         usernamePlaceholder: '输入您的用户名',
         passwordPlaceholder: '输入您的密码'
     },
     vn: {
         username: 'Tên đăng nhập',
         password: 'Mật khẩu',
-        login: 'Đăng nhập (Login)',
+        login: 'Đăng nhập',
         usernamePlaceholder: 'Nhập tên đăng nhập',
         passwordPlaceholder: 'Nhập mật khẩu'
     }
@@ -97,6 +97,8 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     `;
             form.appendChild(alertDiv);
+
+            console.log('Login successful for user:', username, password);
 
             btn.innerHTML = originalText;
             btn.disabled = false;
