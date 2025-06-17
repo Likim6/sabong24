@@ -514,12 +514,14 @@ body {
     border-radius: 4px;
 }
 
-.ui-datepicker-prev, .ui-datepicker-next {
+.ui-datepicker-prev,
+.ui-datepicker-next {
     color: white !important;
     top: 8px !important;
 }
 
-.ui-datepicker-prev:hover, .ui-datepicker-next:hover {
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
     background: transparent !important;
     border: none !important;
 }

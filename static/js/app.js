@@ -1,10 +1,10 @@
 // static/js/app.js
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM loaded, initializing...');
 
     const togglePassword = document.getElementById('togglePassword');
     const passwordField = document.getElementById('password');
-    
+
     if (togglePassword && passwordField) {
         togglePassword.addEventListener('click', function () {
             const icon = this.querySelector('i');
@@ -100,32 +100,32 @@ document.addEventListener('DOMContentLoaded', function() {
     function initTabs() {
         const tabBtns = document.querySelectorAll('.tab-btn');
         console.log('Looking for tabs... Found:', tabBtns.length);
-        
+
         if (tabBtns.length > 0) {
             console.log('Initializing tab functionality...');
-            
+
             tabBtns.forEach((btn, index) => {
                 console.log(`Tab ${index}:`, btn.textContent.trim(), 'data-tab:', btn.getAttribute('data-tab'));
-                
-                btn.addEventListener('click', function(e) {
+
+                btn.addEventListener('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    
+
                     console.log('=== TAB CLICKED ===');
                     console.log('Clicked tab:', this.textContent.trim());
                     console.log('Tab data-tab:', this.getAttribute('data-tab'));
-                    
+
                     tabBtns.forEach(tab => {
                         tab.classList.remove('active');
                         console.log('Removed active from:', tab.textContent.trim());
                     });
-                    
+
                     this.classList.add('active');
                     console.log('Added active to:', this.textContent.trim());
-                    
+
                     const tabType = this.getAttribute('data-tab');
                     console.log('Tab type:', tabType);
-                    
+
                     const emptyText = document.querySelector('.empty-text');
                     if (emptyText) {
                         if (tabType === 'live') {
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     } else {
                         console.log('Empty text element not found');
                     }
-                    
+
                     console.log('=== TAB CLICK COMPLETE ===');
                 });
             });
@@ -150,21 +150,21 @@ document.addEventListener('DOMContentLoaded', function() {
     function initChips() {
         const chips = document.querySelectorAll('.betting-chip');
         const betInput = document.querySelector('.bet-input');
-        
+
         console.log('Looking for chips... Found:', chips.length);
         console.log('Bet input found:', betInput ? 'yes' : 'no');
-        
+
         if (chips.length > 0 && betInput) {
             console.log('Initializing chip functionality...');
-            
+
             chips.forEach(chip => {
-                chip.addEventListener('click', function() {
+                chip.addEventListener('click', function () {
                     console.log('Chip clicked:', this.textContent.trim());
-                    
+
                     chips.forEach(c => c.classList.remove('active'));
-                    
+
                     this.classList.add('active');
-                    
+
                     const value = this.getAttribute('data-value');
                     if (value) {
                         betInput.value = value;
@@ -172,15 +172,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             });
-            
-            betInput.addEventListener('input', function() {
+
+            betInput.addEventListener('input', function () {
                 chips.forEach(c => c.classList.remove('active'));
                 console.log('Input changed, cleared chip selection');
             });
         }
     }
 
-    setTimeout(function() {
+    setTimeout(function () {
         console.log('Initializing tabs and chips...');
         initTabs();
         initChips();
